@@ -3,7 +3,7 @@ score = 0
 name = input("What's your name?")
 # Greet the user and introduce the quiz
 if name == "Jack":
-  print("What a nice name!")
+  print("What a silly name!")
 else:
   print("I don't know that name, who are you?")
 print("Welcome to this quiz,", name)
