@@ -20,7 +20,7 @@ else:
   print("The answer is Vatican City.")
   score-= 1
 # Ask the user another question
- ("What country has the highest population?").lower()
+answer = input("What country has the highest population?").lower()
 # Tell the user the answer
 if answer == "India" .lower():
   print("Correct! Keep it up +1")
@@ -40,9 +40,13 @@ answer = input(QUESTION_FORMAT.format(question, a, b, c, d)).lower()
 if answer == c or answer == "c":
   print("Correct! You are on a roll +1")
   score+=3
+elif answer == "":
+  print("Not sure?")
+elif answer != a and answer != "a" and answer != b and answer != "b" and answer != d and answer != "d":
+  print("That wasn't an option")
 else:
   print("Wrong! You may want to learn Geography -1")
   print("The answer is Maldives at 1.8m or 6ft")
   score-=3
-print("Well done. That's the end. You got ", score, "points")
+# End the quiz
 print("Well done {}. You finished this quiz. Your final score was {}".format(name, score))
