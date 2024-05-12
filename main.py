@@ -1,3 +1,4 @@
+QUESTION_FORMAT = "{}\nA.{} B.{} C.{} D.{}"
 score = 0
 # Ask the user there name
 name = input("What's your name?")
@@ -19,7 +20,7 @@ else:
   print("The answer is Vatican City.")
   score-= 1
 # Ask the user another question
-question = ("What country has the highest population?").lower()
+ ("What country has the highest population?").lower()
 # Tell the user the answer
 if answer == "India" .lower():
   print("Correct! Keep it up +1")
@@ -29,9 +30,14 @@ else:
   print("the answer is India with 1.4 billion")
   score-= 2
 # Ask the user another question
-answer = input("What country has the lowest sea level?").lower()
+question = ("What country has the lowest sea level?").lower()
+a = "Qatar"
+b = "Denmark"
+c = "Maldives"
+d = "New Zealand"
+answer = input(QUESTION_FORMAT.format(question, a, b, c, d)).lower()
 # Tell the user the answer
-if answer == "The Maldives" .lower():
+if answer == c or answer == "c":
   print("Correct! You are on a roll +1")
   score+=3
 else:
