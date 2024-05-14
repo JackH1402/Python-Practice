@@ -1,5 +1,7 @@
+play = "yes"
+
 QUESTION_FORMAT = "{}\nA.{} B.{} C.{} D.{}"
-  while play == "yes":
+while play == "yes":
   score = 0
   # Ask the user there name
   name = input("What's your name?")
@@ -10,6 +12,13 @@ QUESTION_FORMAT = "{}\nA.{} B.{} C.{} D.{}"
     print("I don't know that name, who are you?")
   print("Welcome to this quiz,", name)
   print("This quiz is about countries")
+while True:
+  try:
+    tries = input(" How many attempts do you want at each question? 1-4")
+    tries = int(tries)
+    break
+  except:
+    print("That's not a number")
   # Ask the user a question
   answer = input("What is the smallest country by land mass?").lower()
   # Tell the user the answer
@@ -49,6 +58,6 @@ QUESTION_FORMAT = "{}\nA.{} B.{} C.{} D.{}"
     print("Wrong! You may want to learn Geography -1")
     print("The answer is Maldives at 1.8m or 6ft")
     score-=3
-    play = input("Do you want to play again?").lower()
+  play = input("Do you want to play again?").lower()
 # End the quiz
 print("Well done {}. You finished this quiz. Your final score was {}".format(name, score))
