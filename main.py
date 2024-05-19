@@ -22,6 +22,8 @@ while play == "yes":
       break
     except:
       print("That's not a number")
+    question_attempts = tries
+    while question_attempts > 1:
     # Ask the user a question
   answer = input("What is the smallest country by land mass?").lower()
   # Tell the user the answer
@@ -60,10 +62,12 @@ while play == "yes":
   else:
     print("Wrong! You may want to learn Geography -1")
     print("The answer is Maldives at 1.8m or 6ft")
+    question_attempts -= 1
     score-=3
   
   # End the quiz
   print("Well done {}. You finished this quiz. Your final score was {}".format(name, score))
+  # Replay
   play = input("Do you want to play again?").lower()
 
 print("Goodbye")
