@@ -22,10 +22,14 @@ while play == "yes":
       break
     except:
       print("That's not a number")
-    question_attempts = tries
-    while question_attempts > 1:
-    # Ask the user a question
+      question_attempts = tries
+      while question_attempts > 0:
+  # Ask the user a question
   answer = input("What is the smallest country by land mass?").lower()
+  a = "San Marino"
+  b = "Tonga"
+  c = "Russia"
+  d = "Vatican City"
   # Tell the user the answer
   if answer == "Vatican City" .lower():
     print("Correct! Good job +1")
@@ -33,6 +37,7 @@ while play == "yes":
   else:
     print("Wrong! Unlucky -1")
     print("The answer is Vatican City.")
+    question_attempts = 1
     score-= 1
   # Ask the user another question
   answer = input("What country has the highest population?").lower()
@@ -62,7 +67,6 @@ while play == "yes":
   else:
     print("Wrong! You may want to learn Geography -1")
     print("The answer is Maldives at 1.8m or 6ft")
-    question_attempts -= 1
     score-=3
   
   # End the quiz
