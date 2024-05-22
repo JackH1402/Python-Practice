@@ -1,8 +1,10 @@
 play = "yes"
 
 QUESTION_FORMAT = "{}\nA.{} B.{} C.{} D.{}"
-GOOD_COMMENTS
+GOOD_COMMENTS = ["Good job!", "Keep it up!", "Your on a roll!"]
+BAD_COMMENTS = ["Unlucky", "Keep trying", "You need some help"]
 
+import random
 score = 0
 # Ask the user there name
 name = input("What's your name?")
@@ -33,10 +35,12 @@ while play == "yes":
   d = "Vatican City"
   # Tell the user the answer
   if answer == "Vatican City" .lower():
-    print("Correct! Good job +1")
+    print("Correct")
+    print(random.choice(GOOD_COMMENTS))
     score+= 1
   else:
-    print("Wrong! Unlucky -1")
+    print("Wrong!")
+    print(random.choice(BAD_COMMENTS))
     print("The answer is Vatican City.")
     question_attempts = 1
     score-= 1
