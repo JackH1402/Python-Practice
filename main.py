@@ -1,6 +1,7 @@
 play = "yes"
 
 QUESTION_FORMAT = "{}\nA.{} B.{} C.{} D.{}"
+GOOD_COMMENTS
 
 score = 0
 # Ask the user there name
